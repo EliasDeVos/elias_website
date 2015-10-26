@@ -1,0 +1,11 @@
+- dingen die niet werken:
+
+
+10.37 - 10.50 (00:13) binnenhalen en configureren cakephp 2.0 project
+10.50 - 11.05 (00:15) invullen van database en configureren van database (vergeten wamp aan te zetten)
+11.05 - 12.15 (01:10) creeren van news model/controller en views (index en edit)
+12.15 - 12.50 (00:35) image uploaden (nog niet af, eerst de rest verder doen)
+13.30 - 16.00 (02:30) authenticatie en rollen toevoegen, views toevoegen om users te beheren
+16.00 - 16.37 (00:37) opkuisen code en kijken of alles werkt
+16.45 - 17.00 (00:15) zorgen dat items kunnen gedelete worden
+17.15 - 18.00 (00:45) image uploaden
