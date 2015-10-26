@@ -1,7 +1,7 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Add user'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Add user'), array('action' => 'add')) ?></li>
         <li><?= $this->Html->link(__('View news items'), array('controller' => 'News', 'action' => 'index')) ?></li>
     </ul>
 </nav>
@@ -21,7 +21,7 @@
                 <td><?= h($user['User']['username']) ?></td>
                 <td><?= h($user['User']['role']) ?></td>
                 <td>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user['User']['id']]) ?>
+                    <?= $this->Html->link(__('Edit'), array('action' => 'edit', $user['User']['id'])) ?>
                     <?= $this->Form->postLink(__('Delete'), array('action' => 'delete', $user['User']['id']), array('confirm' => __('Are you sure you want to delete # {0}?', $user['User']['id']))) ?>
                 </td>
             </tr>

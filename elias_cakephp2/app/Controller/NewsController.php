@@ -25,7 +25,7 @@ class NewsController extends AppController
     {
         $news = $this->News->find('all', array('conditions' => array('News.embargo_date <' => date('Y-m-d H:i:s'))));
         $this->set('news', $news);
-        $this->set('role', $this->Auth->user()['role']);
+        $this->set('role', $this->Auth->user('role'));
     }
 
     public function view($id = null)
@@ -82,7 +82,7 @@ class NewsController extends AppController
             $this->request->data['News']['image'] = $this->request->data['News']['image']['name'];
             if ($this->News->save($this->request->data)) {
                 $this->Flash->success(__('The news item has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(array('action' => 'index'));
             } else {
                 $this->Flash->error(__('The news item could not be saved. Please, try again.'));
             }
