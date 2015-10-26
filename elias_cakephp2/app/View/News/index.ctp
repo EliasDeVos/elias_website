@@ -31,7 +31,7 @@
     </ul>
 </nav>
 <div class="index large-9 medium-8 columns content">
-    <h3><?= __('Bookmarks') ?></h3>
+    <h3><?= __('News items') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
         <tr>
