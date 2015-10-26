@@ -2,7 +2,7 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Add user'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('View news items'), ['controller' => 'News', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('View news items'), array('controller' => 'News', 'action' => 'index')) ?></li>
     </ul>
 </nav>
 <div class="users index large-9 medium-8 columns content">
@@ -22,7 +22,7 @@
                 <td><?= h($user['User']['role']) ?></td>
                 <td>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user['User']['id']]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user['User']['id']], ['confirm' => __('Are you sure you want to delete # {0}?', $user['User']['id'])]) ?>
+                    <?= $this->Form->postLink(__('Delete'), array('action' => 'delete', $user['User']['id']), array('confirm' => __('Are you sure you want to delete # {0}?', $user['User']['id']))) ?>
                 </td>
             </tr>
         <?php endforeach; ?>

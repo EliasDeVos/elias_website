@@ -23,7 +23,7 @@ class NewsController extends AppController
 
     public function index()
     {
-        $news = $this->News->find('all', ['conditions' => ['News.embargo_date <' => date('Y-m-d H:i:s')]]);
+        $news = $this->News->find('all', array('conditions' => array('News.embargo_date <' => date('Y-m-d H:i:s'))));
         $this->set('news', $news);
         $this->set('role', $this->Auth->user()['role']);
     }
@@ -36,7 +36,6 @@ class NewsController extends AppController
 
     public function edit($id = null)
     {
-        $newsItem = $this->News->findById($id);
         if (!$id) {
             throw new NotFoundException(__('Invalid news item'));
         }
@@ -93,7 +92,6 @@ class NewsController extends AppController
 
     public function delete($id)
     {
-        var_dump($id);
         if ($this->News->delete($id)) {
             $this->Flash->success(
                 __('The news item has been deleted.')

@@ -7,7 +7,7 @@
                 ['confirm' => __('Are you sure you want to delete # {0}?', $user['User']['id'])]
             )
         ?></li>
-        <li><?= $this->Html->link(__('View news items'), ['controller' => 'News', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('View news items'), array('controller' => 'News', 'action' => 'index')) ?></li>
     </ul>
 </nav>
 <div class="users form large-9 medium-8 columns content">

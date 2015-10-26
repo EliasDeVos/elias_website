@@ -4,11 +4,11 @@
         <li><?php
             if ($role == 'admin')
             {
-                echo $this->Html->link(__('Log out'), ['controller' => 'Users', 'action' => 'logout']);
+                echo $this->Html->link(__('Log out'), array('controller' => 'Users', 'action' => 'logout'));
             }
             else
             {
-                echo $this->Html->link(__('Log in'), ['controller' => 'Users', 'action' => 'login']);
+                echo $this->Html->link(__('Log in'), array('controller' => 'Users', 'action' => 'login'));
             }
             ?>
             </li>
@@ -16,7 +16,7 @@
             if ($role == 'admin')
             {
                 echo "<li>";
-                echo $this->Html->link(__('Manage users'), ['controller' => 'Users', 'action' => 'index']);
+                echo $this->Html->link(__('Manage users'), array('controller' => 'Users', 'action' => 'index'));
                 echo "</li>";
             }
             ?>
@@ -24,7 +24,7 @@
         if ($role == 'admin')
         {
             echo "<li>";
-            echo $this->Html->link(__('Add news item'), ['controller' => 'News', 'action' => 'add']);
+            echo $this->Html->link(__('Add news item'), array('controller' => 'News', 'action' => 'add'));
             echo "</li>";
         }
         ?>
@@ -49,11 +49,11 @@
                 <td><?= h($newsItem['News']['title']) ?></td>
                 <td><?= h($newsItem['News']['publish_date']) ?></td>
                 <td>
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $newsItem['News']['id']]) ?>
+                    <?= $this->Html->link(__('View'), array('action' => 'view', $newsItem['News']['id'])) ?>
                     <?php
                     if ($role == 'admin')
                     {
-                        echo $this->Html->link(__('Edit'), ['action'   => 'edit', $newsItem['News']['id']]);
+                        echo $this->Html->link(__('Edit'), array('action'   => 'edit', $newsItem['News']['id']));
                         echo " ";
                         echo $this->Form->postLink(
                         'Delete',
